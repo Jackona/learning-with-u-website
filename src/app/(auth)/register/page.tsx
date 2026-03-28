@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Eye, EyeOff, Mail, Lock, User } from 'lucide-react'
 import type { SENType, AccountRole } from '@/types'
@@ -47,9 +48,15 @@ export default function RegisterPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#00A2E8] to-[#0077B6] flex flex-col items-center justify-center px-4 py-12">
-      <Link href="/" className="flex items-center gap-2 mb-8">
-        <span className="text-5xl">🐄</span>
-        <span className="text-white font-extrabold text-2xl">Learning With U</span>
+      <Link href="/" className="flex items-center mb-8">
+        <Image
+          src="/logo.jpg"
+          alt="Learning With U"
+          width={160}
+          height={80}
+          className="h-16 w-auto rounded-xl object-contain"
+          priority
+        />
       </Link>
 
       <div className="bg-white rounded-3xl shadow-2xl w-full max-w-md p-8">

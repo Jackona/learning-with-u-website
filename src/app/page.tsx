@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { MessageSquare, Calculator, BookOpen, Palette, HelpCircle, Star, CheckCircle, ChevronDown, ChevronUp, Play } from 'lucide-react'
 
@@ -78,9 +79,15 @@ export default function LandingPage() {
       {/* Header */}
       <header className="bg-[#0077B6] text-white sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center gap-2 font-bold text-xl text-[#FFED00]">
-            <span className="text-2xl">🐄</span>
-            <span>Learning With U</span>
+          <div className="flex items-center">
+            <Image
+              src="/logo.jpg"
+              alt="Learning With U"
+              width={120}
+              height={60}
+              className="h-12 w-auto rounded-xl object-contain"
+              priority
+            />
           </div>
           <nav className="hidden md:flex items-center gap-6 text-sm font-semibold">
             <a href="#features" className="hover:text-[#FFED00] transition-colors">Features</a>
@@ -295,9 +302,13 @@ export default function LandingPage() {
       <footer className="bg-slate-900 text-slate-400 py-10 px-4">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 justify-between">
           <div>
-            <div className="flex items-center gap-2 font-bold text-xl text-[#FFED00] mb-3">
-              <span>🐄</span> Learning With U
-            </div>
+            <Image
+              src="/logo.jpg"
+              alt="Learning With U"
+              width={120}
+              height={60}
+              className="h-12 w-auto rounded-xl object-contain mb-3"
+            />
             <p className="text-sm max-w-xs">Making Learning Fun for every child. SEN • Play • Learn • Grow</p>
           </div>
           <div className="flex flex-wrap gap-12">

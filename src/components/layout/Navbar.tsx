@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 import { Menu, X, Star } from 'lucide-react'
 import { useUserStore } from '@/store/userStore'
@@ -22,9 +23,15 @@ export default function Navbar() {
     <nav className="bg-[#0077B6] text-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link href="/dashboard" className="flex items-center gap-2 font-bold text-xl text-[#FFED00]">
-          <span className="text-2xl">🐄</span>
-          <span>Learning With U</span>
+        <Link href="/dashboard" className="flex items-center">
+          <Image
+            src="/logo.jpg"
+            alt="Learning With U"
+            width={120}
+            height={60}
+            className="h-12 w-auto rounded-xl object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop links */}
