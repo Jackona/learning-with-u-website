@@ -275,6 +275,15 @@ export default function LandingPage() {
         {/* Final CTA */}
         <section className="bg-gradient-to-br from-[#0077B6] to-[#00A2E8] py-20 px-4 text-white text-center">
           <div className="max-w-3xl mx-auto">
+            <div className="flex justify-center mb-8">
+              <Image
+                src="/banner.jpg"
+                alt="Learning With U — Making Learning Fun"
+                width={600}
+                height={300}
+                className="w-full max-w-lg rounded-3xl shadow-2xl object-contain"
+              />
+            </div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Ready to start learning?</h2>
             <p className="text-blue-100 text-lg mb-8">Join thousands of children and teachers across the UK. Free to use, no credit card required.</p>
             <div className="flex flex-wrap gap-4 justify-center">
