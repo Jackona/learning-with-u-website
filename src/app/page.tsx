@@ -137,9 +137,8 @@ export default function LandingPage() {
               </div>
             </div>
             <div className="flex-shrink-0 text-center">
-              <div className="text-[160px] leading-none animate-bounce">🐄</div>
-              <div className="bg-[#FFED00] text-[#0077B6] rounded-2xl px-6 py-3 font-bold text-lg mt-4 shadow-xl">
-                SEN • Play • Learn • Grow
+              <div className="bg-[#FFED00] text-[#0077B6] rounded-2xl px-6 py-3 font-bold text-lg shadow-xl">
+                Learn. Play. Grow
               </div>
             </div>
           </div>
@@ -276,7 +275,6 @@ export default function LandingPage() {
         {/* Final CTA */}
         <section className="bg-gradient-to-br from-[#0077B6] to-[#00A2E8] py-20 px-4 text-white text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="text-6xl mb-6">🐄</div>
             <h2 className="text-3xl md:text-4xl font-extrabold mb-4">Ready to start learning?</h2>
             <p className="text-blue-100 text-lg mb-8">Join thousands of children and teachers across the UK. Free to use, no credit card required.</p>
             <div className="flex flex-wrap gap-4 justify-center">
@@ -309,7 +307,7 @@ export default function LandingPage() {
               height={60}
               className="h-12 w-auto rounded-xl object-contain mb-3"
             />
-            <p className="text-sm max-w-xs">Making Learning Fun for every child. SEN • Play • Learn • Grow</p>
+            <p className="text-sm max-w-xs">Making Learning Fun for every child. Learn. Play. Grow</p>
           </div>
           <div className="flex flex-wrap gap-12">
             <div>
