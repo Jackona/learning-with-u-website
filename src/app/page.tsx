@@ -76,31 +76,91 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-[#0077B6] text-white sticky top-0 z-50 shadow-md">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-          <div className="flex items-center">
+      {/* ── LWU BANNER ── */}
+      <header
+        className="sticky top-0 z-50 w-full shadow-lg"
+        style={{ backgroundColor: '#00A2E8' }}
+      >
+        <div className="w-full px-6 py-4 flex items-center justify-between gap-6 min-h-[100px] md:min-h-[120px]">
+
+          {/* LEFT — Cow mascot */}
+          <div className="flex-shrink-0 flex items-end self-stretch">
             <Image
-              src="/logo.jpg"
-              alt="Learning With U"
-              width={120}
-              height={60}
-              className="h-12 w-auto rounded-xl object-contain"
+              src="/bigcow.jpg"
+              alt="Learning With U mascot"
+              width={200}
+              height={200}
+              className="h-28 md:h-36 w-auto object-contain object-bottom drop-shadow-lg"
               priority
             />
           </div>
-          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold">
-            <a href="#features" className="hover:text-[#FFED00] transition-colors">Features</a>
-            <a href="#how-it-works" className="hover:text-[#FFED00] transition-colors">How it works</a>
-            <a href="#demo" className="hover:text-[#FFED00] transition-colors">Try it</a>
-            <a href="#faq" className="hover:text-[#FFED00] transition-colors">FAQ</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <Link href="/login" className="text-sm font-semibold hover:text-[#FFED00] transition-colors">Log in</Link>
-            <Link href="/register" className="bg-[#FFED00] text-[#0077B6] px-4 py-2 rounded-full font-bold text-sm hover:bg-yellow-300 transition-colors">
-              Get Started Free
+
+          {/* CENTRE — Title: "Learning" + "With U" */}
+          <div className="flex flex-col items-center justify-center flex-1 leading-none select-none gap-0">
+            {/* Line 1: Learning */}
+            <div className="relative inline-block">
+              <span
+                className="font-extrabold block"
+                style={{
+                  fontSize: 'clamp(28px, 4vw, 52px)',
+                  color: '#FFED00',
+                  WebkitTextStroke: '3px #0077B6',
+                  paintOrder: 'stroke fill',
+                  lineHeight: 1.1,
+                  fontFamily: 'system-ui, Arial Rounded MT Bold, sans-serif',
+                }}
+              >
+                Learning
+              </span>
+            </div>
+            {/* Line 2: With U — larger */}
+            <div className="relative inline-block">
+              <span
+                className="font-extrabold block"
+                style={{
+                  fontSize: 'clamp(40px, 6vw, 72px)',
+                  color: '#FFED00',
+                  WebkitTextStroke: '3px #0077B6',
+                  paintOrder: 'stroke fill',
+                  lineHeight: 1.0,
+                  fontFamily: 'system-ui, Arial Rounded MT Bold, sans-serif',
+                }}
+              >
+                With U
+              </span>
+            </div>
+          </div>
+
+          {/* RIGHT — Login + Sign Up */}
+          <div className="flex-shrink-0 flex items-center gap-3">
+            {/* Login — white outline pill */}
+            <Link
+              href="/login"
+              className="whitespace-nowrap font-extrabold text-sm transition-all hover:bg-white hover:text-[#0077B6]"
+              style={{
+                color: '#FFFFFF',
+                border: '2.5px solid #FFFFFF',
+                borderRadius: '50px',
+                padding: '12px 24px',
+              }}
+            >
+              Login
+            </Link>
+            {/* Sign Up — yellow filled pill */}
+            <Link
+              href="/register"
+              className="whitespace-nowrap font-extrabold text-sm hover:bg-yellow-300 transition-colors"
+              style={{
+                backgroundColor: '#FFED00',
+                color: '#0077B6',
+                borderRadius: '50px',
+                padding: '12px 24px',
+              }}
+            >
+              Sign Up
             </Link>
           </div>
+
         </div>
       </header>
 
@@ -310,11 +370,11 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 justify-between">
           <div>
             <Image
-              src="/logo.jpg"
+              src="/footer-logo.jpg"
               alt="Learning With U"
-              width={120}
-              height={60}
-              className="h-12 w-auto rounded-xl object-contain mb-3"
+              width={260}
+              height={80}
+              className="h-20 w-auto object-contain mb-3 rounded-xl"
             />
             <p className="text-sm max-w-xs">Making Learning Fun for every child. Learn. Play. Grow</p>
           </div>
